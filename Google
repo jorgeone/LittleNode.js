@@ -1,0 +1,11 @@
+var google = require("google");
+
+var search = process.argv[2];
+ 
+console.log(search);
+
+google(search, function (err, res){
+  if (err) console.error(err)
+  
+  console.log(res.links);
+})
